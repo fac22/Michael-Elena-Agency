@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400&family=Zen+Loop&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400&family=Zen+Loop&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 body {
   /* background-color: #a01a7d; */
   background-color: #ffb6c1;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   /* font-family: 'Zen Loop', cursive; */
 }
 
@@ -36,6 +36,18 @@ img {
   color: midnightblue;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  border: 2px solid #b22633;
+  border-radius: 5px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
 /* --------------------------- PRIMITIVES --------------------------- */
 
@@ -93,4 +105,15 @@ img {
 
 .justify-space-between {
   justify-content: space-between;
+}
+
+/* ---> GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.5rem;
+}
+
+.column-lg {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
