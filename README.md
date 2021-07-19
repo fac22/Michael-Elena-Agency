@@ -1,6 +1,6 @@
 # Michael's & Elena's Agency
 
-This is a prototype page of our [] agency :)
+This is a prototype page of our [...] agency :)
 ![Welcome](https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif)
 
 ## Assigned user stories:
@@ -15,7 +15,10 @@ This is a prototype page of our [] agency :)
 - [ ] Visit your website at a publicly accessible domain name (E2)
 - [ ] Navigate your website using keyboard controls (E2)
 
-
+--------------------------------------------------------- 
 
 ## Acceptance Criteria
 - [ ] Navigation menu :compass:
+- [ ] `About us` section :upside_down_face:
+- [ ] Images, text and external links :link:
+- [ ] Semantic HTML elements :brain:
