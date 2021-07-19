@@ -18,7 +18,7 @@ This is a prototype page of our [...] agency :)
 --------------------------------------------------------- 
 
 ## Acceptance Criteria
-- [ ] Navigation menu :compass:
+- [x] Navigation menu :compass:
 - [ ] `About us` section :upside_down_face:
-- [ ] Images, text and external links :link:
+- [x] Images, text and external links :link:
 - [ ] Semantic HTML elements :brain:
