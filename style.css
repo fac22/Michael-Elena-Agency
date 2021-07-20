@@ -31,7 +31,7 @@ img {
     max-height: 50%;
 } */
 
-.nav__bar {
+.navbar {
   justify-content: center;
 }
 
@@ -39,6 +39,17 @@ img {
   color: midnightblue;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+#About img {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#About {
+  margin-top: 2rem;
 }
 
 .member {
@@ -89,6 +100,10 @@ img {
 
 .stack-xl > * + * {
   margin-top: 4rem;
+}
+
+.stack-xxl > * + * {
+  margin-top: 8rem;
 }
 
 /* ---> HORIZONTAL ALIGNMENT */

@@ -4,40 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>Michael & Elena's Agency</title>
   </head>
   <body>
     <header>
-      <div class="center width-lg row justify-space-between stack-lg">
-        <span>MEA Robotics</span>
-        <ul class="row nav__bar">
+      <div class="navbar center width-lg row justify-space-between stack-lg">
+        <!-- ------------ NAVIGATION ------------ -->
+        <span tabindex="0">MEA Robotics</span>
+        <ul class="row">
           <li><a href="#About" class="links">About Us</a></li>
           <li><a href="#Team" class="links">Our Team</a></li>
-          <li><a href="#Socials">Let's connect</a></li>
+          <li><a href="#Socials" class="links">Let's connect!</a></li>
         </ul>
       </div>
-      <div class="center">
-        <img
-          src="https://images.unsplash.com/photo-1620651575627-2d83969add21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
-          alt="Robot Family"
-        />
-      </div>
+      <!-- <div class="center"></div> -->
     </header>
 
-    <main>
+    <main class="stack-xxl">
+      <!-- ------------ ABOUT SECTION ------------ -->
       <section id="About">
-        <div class="center width-md stack-md">
-          <h2>About MEA Robotics</h2>
-          <p>
-            MEA Robotics was founded in 2021 by Michael Williams and Elena
-            Marinaki to provide modern solutions to the rising demands of
-            everyday life.
-          </p>
+        <div class="row center width-lg stack-md">
+          <img src="images/robot-camera.jpg" alt="Robot Camera" />
+          <div>
+            <h2>About MEA Robotics</h2>
+            <p>
+              MEA Robotics was founded in 2021 by Michael Williams and Elena
+              Marinaki to provide modern solutions to the rising demands of
+              everyday life. An innovative agency with the most technologically
+              advanced team members, ready to cater every need!
+            </p>
+          </div>
         </div>
       </section>
+      <!-- ------------ TEAM MEMBERS ------------ -->
       <section id="Team" class="center width-md stack-md">
         <div class="center width-md stack-lg">
           <h2>Meet our team members!</h2>
@@ -70,7 +72,10 @@
           </li>
           <li>
             <div class="member stack-md">
-              <img src="images/Shop-P3R.jpg" alt="Fashionable Robot - Shop-P3R" />
+              <img
+                src="images/Shop-P3R.jpg"
+                alt="Fashionable Robot - Shop-P3R"
+              />
               <h3>Meet Shop-P3R!</h3>
               <p>
                 Either personal or owned by up to 3 different households,
@@ -98,30 +103,36 @@
               <h3>Meet Doc-tR!</h3>
               <p>
                 For all your medical needs,
-                <strong>Doc-tR</strong> can be personal or owned by up to 3 different households. It helps diagnosing medical issues fast and reliably and communicates everything with your GP!
+                <strong>Doc-tR</strong> can be personal or owned by up to 3
+                different households. It helps diagnosing medical issues fast
+                and reliably and communicates everything with your GP!
               </p>
             </div>
           </li>
           <li>
             <div class="member stack-md">
-              <img src="images/Ent3r-tNr.jpg" alt="Pianist  Robot - Ent3r-tNr" />
+              <img
+                src="images/Ent3r-tNr.jpg"
+                alt="Pianist  Robot - Ent3r-tNr"
+              />
               <h3>Meet Ent3r-tNr!</h3>
               <p>
                 Planning an event and you have run out of ideas? Worry not!
-                <strong>Ent3r-tNr</strong> comes to the rescue and takes care of everything. As skilled a pianist as a potential comedian, Ent3r-tNr is here to steal the show!
+                <strong>Ent3r-tNr</strong> comes to the rescue and takes care of
+                everything. As skilled a pianist as a potential comedian,
+                Ent3r-tNr is here to steal the show!
               </p>
             </div>
           </li>
         </ul>
       </section>
-      <section id="#Socials">
-        <div class="center width-md stack-md">
-          <h2>Let's connect!</h2>
-        </div>
-      </section>
     </main>
 
     <footer>
+      <!-- ------------ SOCIALS ------------ -->
+      <div id="#Socials" class="center width-md stack-md">
+        <h2>Let's connect!</h2>
+      </div>
       <ul class="center row gap-lg justify-space-between">
         <li class="links">Twitter</li>
         <li class="links">Instagram</li>
