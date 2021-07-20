@@ -6,18 +6,21 @@ This is a prototype page of our [...] agency :)
 ## Assigned user stories:
 
 ### Michael:
+
 - [ ] Browse your website on mobile, tablet, and desktop devices (E3)
-- [ ] Click to navigate to different sections of your webpage (E1)
+- [x] Click to navigate to different sections of your webpage (E1)
 - [x] Hear my screen reader describe the content on your website (E1)
 
 ### Elena:
+
 - [x] See information about each member of your team so that I can know who you are (E1)
 - [x] Visit your website at a publicly accessible domain name (E2)
 - [ ] Navigate your website using keyboard controls (E2)
 
---------------------------------------------------------- 
+---
 
 ## Acceptance Criteria
+
 - [x] Navigation menu :compass:
 - [x] `About us` section :upside_down_face:
 - [x] Images, text and external links :link:
