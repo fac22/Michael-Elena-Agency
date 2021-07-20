@@ -11,7 +11,7 @@ This is a prototype page of our [...] agency :)
 - [x] Hear my screen reader describe the content on your website (E1)
 
 ### Elena:
-- [ ] See information about each member of your team so that I can know who you are (E1)
+- [x] See information about each member of your team so that I can know who you are (E1)
 - [x] Visit your website at a publicly accessible domain name (E2)
 - [ ] Navigate your website using keyboard controls (E2)
 
@@ -19,6 +19,6 @@ This is a prototype page of our [...] agency :)
 
 ## Acceptance Criteria
 - [x] Navigation menu :compass:
-- [ ] `About us` section :upside_down_face:
+- [x] `About us` section :upside_down_face:
 - [x] Images, text and external links :link:
 - [ ] Semantic HTML elements :brain:
