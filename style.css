@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap");
 
 /* 
 ----------- FONT FAMILIES -------------
@@ -35,7 +35,7 @@ body {
   background-color: #2b2d42;
   /* background-color: #ffb6c1; */
   color: #edf2f4;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -56,28 +56,29 @@ img {
 
 header {
   background-color: #202236;
-  font-family: 'Source Code Pro', monospace;
-
+  font-family: "Source Code Pro", monospace;
   padding: 0.3rem;
 }
 
 .navbar li {
-  background-color: #2B2D42;
-  padding: 0.5rem;
-  border-radius: 5px;
-
+  border-radius: 1px;
   transition: all 0.25s;
+  background-color: #2b2d42;
+  padding: 0.5rem;
 }
 
 .navbar li:hover {
-    /* border-color: #fca311; */
-    box-shadow: 0 0.5em 0.5em -0.4em #fca311;
-    transform: translateY(-0.25em);
+  /* border-color: #fca311; */
+  box-shadow: 0 0.5em 0.5em -0.4em #fca311;
+  transform: translateY(-0.25em);
+  color: #00ced1;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 h2,
 h3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .links:hover {
@@ -87,12 +88,12 @@ h3 {
 }
 
 #About img {
-  width: 500px;
-  height: 500px;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 50%;
   background-size: cover;
   /* border: 2px solid rgba(247, 202, 24, 1); */
-  border: 3px solid #00ced1;
-  border-radius: 50%;
+  border: 1px solid #00ced1;
 }
 
 #About {
@@ -115,7 +116,8 @@ h3 {
 }
 
 .member img {
-  max-height: 100px;
+  height: 10em;
+  width: 10em;
 }
 
 footer {
@@ -187,7 +189,28 @@ footer {
 /* ---> GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.7rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.1rem;
   grid-auto-rows: 1fr;
+}
+
+@media (min-width: 800px) {
+  header {
+    padding: 0.3rem;
+  }
+
+  .grid {
+    gap: 1.7rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .navbar li {
+    border-radius: 5px;
+  }
+  #About img {
+    width: 500px;
+    height: 500px;
+    /* border: 2px solid rgba(247, 202, 24, 1); */
+    border: 3px solid #00ced1;
+    border-radius: 50%;
+  }
 }
