@@ -128,14 +128,17 @@
     </main>
     <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
     <section id="Members" class="members-area center width-md stack-lg">
+      <h2>Enter our members team!</h2>
       <form action="" class="center stack-lg">
         <article class="center stack-md">
+          <h3>Info about you</h3>
+
           <div>
             <label for="name">Member Name (3-20 characters):</label>
             <input
               type="text"
               id="name"
-              required
+              required  
               minlength="3"
               maxlength="20"
             />
@@ -165,12 +168,23 @@
           </div>
         </article>
 
-        <article>
-          <div>Please enter your login details</div>
+        <article class="center stack-md">
+          <h3>Please enter your login details</h3>
 
           <div>
             <label for="email">E-mail address:</label>
             <input type="email" id="email" size="30" required />
+          </div>
+
+          <div>
+            <label for="pass">Password:</label>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
           </div>
         </article>
       </form>
