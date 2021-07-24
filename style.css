@@ -124,6 +124,10 @@ h3 {
 .member img {
   height: 10em;
   width: 10em;
+  border-radius: 50%;
+  box-shadow: -4px -4px 10px rgba(43, 45, 66, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(43, 45, 66, 0.1),
+    0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {
