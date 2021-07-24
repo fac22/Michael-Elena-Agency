@@ -81,10 +81,16 @@ h3 {
   font-family: "Source Code Pro", monospace;
 }
 
+.links {
+  transition: all 0.3s;
+  z-index: 1;
+}
+
 .links:hover {
-  color: #00ced1;
-  font-weight: bold;
-  font-size: 1.1rem;
+  transform: scale(1.3);
+  background-color: rgba(43, 45, 66, 0.1);
+  border-radius: 100%;
+  box-shadow: 0 0.5em 0.9em -0.4em #fca311;
 }
 
 #About img {
@@ -105,7 +111,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-height: 95%;
+  max-height: 90%;
 
   margin: 0;
   padding: 1rem;
