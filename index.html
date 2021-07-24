@@ -20,6 +20,8 @@
         <ul class="navbar row">
           <li><a href="#About" class="links">About Us</a></li>
           <li><a href="#Team" class="links">Our Team</a></li>
+          <li><a href="#Members" class="links">Members</a></li>
+          <li><a href="#Clients" class="links">Clients</a></li>
           <li><a href="#Socials" class="links">Let's connect!</a></li>
         </ul>
       </div>
@@ -124,7 +126,57 @@
         </ul>
       </section>
     </main>
+    <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
+    <section id="Members" class="members-area center width-md stack-lg">
+      <form action="" class="center stack-lg">
+        <article class="center stack-md">
+          <div>
+            <label for="name">Member Name (3-20 characters):</label>
+            <input
+              type="text"
+              id="name"
+              required
+              minlength="3"
+              maxlength="20"
+            />
+          </div>
 
+          <div>
+            <label for="avatar">Please upload your avatar:</label>
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+
+          <div>
+            <div>
+              <label for="description">Please add your description:</label>
+            </div>
+
+            <textarea
+              name="description"
+              id="description"
+              cols="65"
+              rows="7"
+            ></textarea>
+          </div>
+        </article>
+
+        <article>
+          <div>Please enter your login details</div>
+
+          <div>
+            <label for="email">E-mail address:</label>
+            <input type="email" id="email" size="30" required />
+          </div>
+        </article>
+      </form>
+    </section>
+
+    <!-- ----------------------------- F O O T E R -----------------------------  -->
     <footer id="Socials">
       <!-- ------------ SOCIALS ------------ -->
       <!-- <div  class="center width-md stack-md">
