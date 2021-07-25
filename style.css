@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap');
 
 /* 
 ----------- FONT FAMILIES -------------
@@ -35,7 +35,7 @@ body {
   background-color: #2b2d42;
   /* background-color: #ffb6c1; */
   color: #edf2f4;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -56,7 +56,7 @@ img {
 
 header {
   background-color: #202236;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   padding: 0.3rem;
 }
 
@@ -78,7 +78,7 @@ header {
 
 h2,
 h3 {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .links {
@@ -130,17 +130,19 @@ h3 {
     0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
 /* ---------------------- MEMBERS FORM ----------------------  */
 .warning {
-  border: 5px solid rgb(230, 72, 167);
-  animation: blink .5s step-end infinite alternate;
+  border: 3px solid rgba(230, 72, 167, 0.6);
+  border-radius: 2px;
+  animation: blink 0.5s step-end infinite alternate;
   transition: all 0.3s;
+  box-shadow: 3px 3px 2px 1px rgba(222, 96, 163, 0.2);
 }
 
-#span-text {
+.span-text {
   color: rgba(230, 72, 167, 0.9);
-  font-size: 1rem;
+  font-size: 0.9rem;
+  transition: all 0.5s;
 }
 
 .hide {

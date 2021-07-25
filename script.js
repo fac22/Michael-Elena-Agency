@@ -1,14 +1,56 @@
-function validateInput() {
-  const description = document.querySelector('#description');
-  const warningTxt = document.querySelector('#span-text');
+const nameId = document.querySelector('#name');
+const description = document.querySelector('#description');
+const email = document.querySelector('#email');
+const pass = document.querySelector('#pass');
+const warningTxt = document.querySelectorAll('.span-text');
 
+function init() {
+  warningTxt.forEach((x) => {
+    x.classList.add('hide');
+  });
+  nameId.value = '';
+  description.value = '';
+  email.value = '';
+}
+function validateName() {
+  if (nameId.value.length < 3 || nameId.value.length > 20) {
+    nameId.classList.add('warning');
+    warningTxt[0].classList.remove('hide');
+  } else {
+    nameId.classList.remove('warning');
+    warningTxt[0].classList.add('hide');
+  }
+}
+function validateDescription() {
   if (description.value.length > 149) {
     description.classList.add('warning');
-    warningTxt.classList.remove('hide');
+    warningTxt[1].classList.remove('hide');
   } else {
     description.classList.remove('warning');
-    warningTxt.classList.add('hide');
+    warningTxt[1].classList.add('hide');
+  }
+}
+function validateEmail() {
+  if (!email.value.includes('@')) {
+    email.classList.add('warning');
+    warningTxt[2].classList.remove('hide');
+  } else {
+    email.classList.remove('warning');
+    warningTxt[2].classList.add('hide');
+  }
+}
+function validatePass() {
+  if (pass.value.length < 8) {
+    pass.classList.add('warning');
+    warningTxt[3].classList.remove('hide');
+  } else {
+    pass.classList.remove('warning');
+    warningTxt[3].classList.add('hide');
   }
 }
 
-document.addEventListener('keydown', validateInput);
+window.addEventListener('load', init);
+description.addEventListener('input', validateDescription);
+nameId.addEventListener('input', validateName);
+email.addEventListener('input', validateEmail);
+pass.addEventListener('input', validatePass);

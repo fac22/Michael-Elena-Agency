@@ -132,19 +132,21 @@
       <form action="" class="center stack-lg">
         <article class="center stack-md">
           <h3>Tell us a few things about you</h3>
-
+          <!-- --------------------- name -->
           <div>
-            <label for="name">Member Name:</label>
+            <div class="row">
+              <label for="name">Member Name:</label>
+              <div class="span-text hide">use between 3 and 20 characters!</div>
+            </div>
+
             <input
               type="text"
               id="name"
               placeholder="3-20 characters"
               required
-              minlength="3"
-              maxlength="20"
             />
           </div>
-
+          <!-- --------------------- avatar -->
           <div>
             <label for="avatar">Please upload your avatar:</label>
             <input
@@ -154,11 +156,11 @@
               accept="image/png, image/jpeg"
             />
           </div>
-
+          <!-- --------------------- description -->
           <div>
             <div id="desc-label" class="row">
               <label for="description">Please add your description:</label>
-              <div id="span-text" class="hide">max 149 characters</div>
+              <div class="span-text hide">max 149 characters</div>
             </div>
 
             <textarea
@@ -173,14 +175,25 @@
 
         <article class="center stack-md">
           <h3>Please enter your login details</h3>
-
+          <!-- --------------------- email -->
           <div>
-            <label for="email">E-mail address:</label>
+            <div class="row">
+              <label for="email">E-mail address:</label>
+              <div class="span-text hide">enter a valid email address</div>
+            </div>
+
             <input type="email" id="email" size="30" required />
           </div>
 
+          <!-- --------------------- password -->
           <div>
-            <label for="pass">Password:</label>
+            <div class="row">
+              <label for="pass">Password:</label>
+              <div class="span-text hide">
+                min 8 characters
+              </div>
+            </div>
+
             <input
               type="password"
               id="pass"
