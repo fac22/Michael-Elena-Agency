@@ -1,3 +1,5 @@
+// -------------- Input Validation for Members --------------
+
 const nameId = document.querySelector('#name');
 const description = document.querySelector('#description');
 const email = document.querySelector('#email');
@@ -31,7 +33,9 @@ function validateDescription() {
   }
 }
 function validateEmail() {
-  if (!email.value.includes('@')) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ 
+  if (!re.test(email.value)) {
     email.classList.add('warning');
     warningTxt[2].classList.remove('hide');
   } else {
