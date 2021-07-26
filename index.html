@@ -18,9 +18,11 @@
         <!-- ------------ NAVIGATION ------------ -->
         <h1 tabindex="0">MEA Robotics</h1>
         <ul class="navbar row">
-          <li><a href="#About" class="links">About Us</a></li>
-          <li><a href="#Team" class="links">Our Team</a></li>
-          <li><a href="#Socials" class="links">Let's connect!</a></li>
+          <li><a href="#About">About Us</a></li>
+          <li><a href="#Team">Our Team</a></li>
+          <li><a href="#Members">Members</a></li>
+          <li><a href="#Clients">Clients</a></li>
+          <li><a href="#Socials">Let's connect!</a></li>
         </ul>
       </div>
       <!-- <div class="center"></div> -->
@@ -124,7 +126,87 @@
         </ul>
       </section>
     </main>
+    <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
+    <section id="Members" class="members-area center width-md stack-lg">
+      <h2>Enter our team!</h2>
+      <form action="" class="center stack-lg">
+        <article class="center stack-md">
+          <h3>Tell us a few things about you</h3>
+          <!-- --------------------- name -->
+          <div>
+            <div class="row">
+              <label for="name">Member Name:</label>
+              <div class="span-text hide">use between 3 and 20 characters!</div>
+            </div>
 
+            <input
+              type="text"
+              id="name"
+              placeholder="3-20 characters"
+              required
+            />
+          </div>
+          <!-- --------------------- avatar -->
+          <div>
+            <label for="avatar">Please upload your avatar:</label>
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+          <!-- --------------------- description -->
+          <div>
+            <div id="desc-label" class="row">
+              <label for="description">Please add your description:</label>
+              <div class="span-text hide">max 149 characters</div>
+            </div>
+
+            <textarea
+              name="description"
+              id="description"
+              placeholder="max 149 characters"
+              cols="65"
+              rows="7"
+            ></textarea>
+          </div>
+        </article>
+
+        <article class="center stack-md">
+          <h3>Please enter your login details</h3>
+          <!-- --------------------- email -->
+          <div>
+            <div class="row">
+              <label for="email">E-mail address:</label>
+              <div class="span-text hide">enter a valid email address</div>
+            </div>
+
+            <input type="email" id="email" size="30" required />
+          </div>
+
+          <!-- --------------------- password -->
+          <div>
+            <div class="row">
+              <label for="pass">Password:</label>
+              <div class="span-text hide">
+                min 8 characters
+              </div>
+            </div>
+
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </div>
+        </article>
+      </form>
+    </section>
+
+    <!-- ----------------------------- F O O T E R -----------------------------  -->
     <footer id="Socials">
       <!-- ------------ SOCIALS ------------ -->
       <!-- <div  class="center width-md stack-md">
@@ -135,7 +217,13 @@
         <li class="links">
           <img src="socials/instagram.svg" alt="instagram" />
         </li>
-        <li class="links"><img src="socials/github.svg" alt="github" /></li>
+        <li class="links">
+          <a
+            href="https://github.com/fac22/Michael-Elena-Agency"
+            target="_blank"
+            ><img src="socials/github.svg" alt="github"
+          /></a>
+        </li>
         <li class="links"><img src="socials/youtube.svg" alt="youtube" /></li>
       </ul>
     </footer>

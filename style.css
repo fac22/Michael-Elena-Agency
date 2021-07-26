@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&family=Source+Code+Pro&display=swap');
 
 /* 
 ----------- FONT FAMILIES -------------
@@ -35,7 +35,7 @@ body {
   background-color: #2b2d42;
   /* background-color: #ffb6c1; */
   color: #edf2f4;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -56,7 +56,7 @@ img {
 
 header {
   background-color: #202236;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   padding: 0.3rem;
 }
 
@@ -78,13 +78,19 @@ header {
 
 h2,
 h3 {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.links {
+  transition: all 0.3s;
+  z-index: 1;
 }
 
 .links:hover {
-  color: #00ced1;
-  font-weight: bold;
-  font-size: 1.1rem;
+  transform: scale(1.3);
+  background-color: rgba(94, 97, 126, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0.5em 0.9em -0.4em #fca311;
 }
 
 #About img {
@@ -105,7 +111,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-height: 95%;
+  max-height: 90%;
 
   margin: 0;
   padding: 1rem;
@@ -118,8 +124,32 @@ h3 {
 .member img {
   height: 10em;
   width: 10em;
+  border-radius: 50%;
+  box-shadow: -4px -4px 10px rgba(43, 45, 66, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(43, 45, 66, 0.1),
+    0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* ---------------------- MEMBERS FORM ----------------------  */
+.warning {
+  border: 3px solid rgba(230, 72, 167, 0.6);
+  border-radius: 2px;
+  animation: blink 0.5s step-end infinite alternate;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 2px 1px rgba(222, 96, 163, 0.2);
+}
+
+.span-text {
+  color: rgba(230, 72, 167, 0.9);
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+
+.hide {
+  display: none;
+}
+
+/* ---------------------- F O O T E R ----------------------  */
 footer {
   margin-top: 5rem;
   padding: 0.5rem;
