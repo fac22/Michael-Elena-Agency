@@ -139,7 +139,7 @@ h3 {
   box-shadow: 3px 3px 2px 1px rgba(222, 96, 163, 0.2);
 }
 
-.span-text {
+.span-text, .error-text {
   color: rgba(230, 72, 167, 0.9);
   font-size: 0.9rem;
   transition: all 0.5s;
@@ -222,6 +222,10 @@ footer {
   grid-template-columns: repeat(1, 1fr);
   gap: 1.1rem;
   grid-auto-rows: 1fr;
+}
+#Clients {
+  text-align: center;
+  border: 1px solid #b2265c;
 }
 
 @media (min-width: 800px) {
