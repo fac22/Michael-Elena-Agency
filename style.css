@@ -151,6 +151,7 @@ h3 {
 }
 
 #Members {
+  margin-top: 4rem;
   border: 2px solid #00ced1;
   box-shadow: 12px 12px 2px 1px rgba(0, 206, 209, 0.2);
 }
@@ -240,7 +241,7 @@ footer {
   border: 2px solid gold;
   border-radius: 5px;
   /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2); */
-  box-shadow: 12px 12px 2px 1px goldenrod;
+  box-shadow: 12px 12px 2px 1px rgba(218, 165, 32, 0.2);
 }
 
 @media (min-width: 800px) {
