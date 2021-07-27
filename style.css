@@ -139,7 +139,8 @@ h3 {
   box-shadow: 3px 3px 2px 1px rgba(222, 96, 163, 0.2);
 }
 
-.span-text, .error-text {
+.span-text,
+.error-text {
   color: rgba(230, 72, 167, 0.9);
   font-size: 0.9rem;
   transition: all 0.5s;
@@ -247,4 +248,8 @@ footer {
     border: 3px solid #00ced1;
     border-radius: 50%;
   }
+}
+#newReq {
+  border: 1px solid white;
+  color: pink;
 }

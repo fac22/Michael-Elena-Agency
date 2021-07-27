@@ -11,6 +11,7 @@ function init() {
   });
   cName.value = '';
   request.value = '';
+  robot.value = '';
   cEmail.value = '';
 }
 function validateName() {
@@ -47,29 +48,50 @@ function checkRobot() {
   if(robotChoice == "none"){
     robotChoice = "no robot";
   }
-  return robotChoice;
 }
-function allValues(){
-  let client = [cName.value, cEmail.value, checkRobot(), request.value];
-  console.log(client)
+// function allValues(){
+//   let client = [cName.value, cEmail.value, checkRobot(), request.value];
+//   return client;
+// }
+let output = [
+  cName.value,
+  cEmail.value,
+  robot.options[robot.selectedIndex].value,
+  request.value
+]
+function returnOutput(){
+  console.log([cName.value,
+    cEmail.value,
+    robot.options[robot.selectedIndex].value,
+    request.value]);
 }
-function allInfo(values){
-  const {name, email, newRobot, desires} = values;
+
+function allInfo(){
+  const [name, email, newRobot, desires] = [cName.value,
+    cEmail.value,
+    robot.options[robot.selectedIndex].value,
+    request.value];
   const template = document.querySelector("#review-client");
   const domFragment = template.content.cloneNode(true);
-  domFragment.querySelector("h2").textContent = name;
-  domFragment.querySelector("h3").textContent = email;
-  domFragment.querySelector("h1").textContent = newRobot;
-  domFragment.querySelector("p").textContent = desires;
-
-  newSection.appendChild(domFragment);
+  domFragment.querySelector("h2").innerHTML = name;
+  domFragment.querySelector("h3").innerHTML = email;
+  domFragment.querySelector("h1").innerHTML = newRobot;
+  domFragment.querySelector("p").innerHTML = desires;
+  
+  if(!desires.length || !name.length || !newRobot.length){
+    alert("Please fill out all sections")
+  }else{
+    newSection.appendChild(domFragment);
+  }
+  
 
 }
-
 
 window.addEventListener('load', init);
 request.addEventListener('input', validateRequest);
 cName.addEventListener('input', validateName);
 cEmail.addEventListener('input', validateEmail);
-document.getElementById("button").addEventListener("click", allValues);
-allValues.forEach(allInfo)
+robot.addEventListener('change', checkRobot);
+document.getElementById("button").addEventListener('click', returnOutput);
+document.getElementById("button").addEventListener("click", allInfo);
+
