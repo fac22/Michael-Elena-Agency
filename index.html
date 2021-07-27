@@ -126,9 +126,11 @@
           <!-- ----------------------------- NEW MEMBER TEMPLATE -----------------------------  -->
           <template id="new-member">
             <li>
-              <img alt="" class="member-avatar" />
-              <h3 class="member-title"></h3>
-              <p></p>
+              <div class="member stack-md">
+                <img alt="" class="member-avatar" />
+                <h3 class="member-title"></h3>
+                <p></p>
+              </div>
             </li>
           </template>
         </ul>
@@ -137,7 +139,7 @@
     <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
     <section id="Members" class="members-area member center width-md stack-lg">
       <h2>Enter our team!</h2>
-      <form action="" class="center stack-lg">
+      <form class="center stack-lg">
         <article class="center stack-md">
           <h3>Tell us a few things about you</h3>
           <!-- --------------------- name -->
@@ -211,7 +213,7 @@
         </article>
 
         <div>
-          <button type="submit" id="member-submit">Submit :)</button>
+          <button type="button" id="member-submit">Submit</button>
         </div>
       </form>
     </section>

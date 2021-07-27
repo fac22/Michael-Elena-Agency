@@ -62,7 +62,7 @@ function submitMemberApp() {
     memberAvatar: '',
     memberText: description.value,
   };
-
+  console.log('i*m here!');
   const template = document.querySelector('#new-member');
   const domFragment = template.content.cloneNode(true);
 
