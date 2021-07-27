@@ -226,7 +226,10 @@ footer {
 }
 #Clients {
   text-align: center;
-  border: 1px solid #b2265c;
+  border: 2px solid gold;
+  border-radius: 5px;
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2); */
+  box-shadow: 12px 12px 2px 1px goldenrod;
 }
 
 @media (min-width: 800px) {
@@ -250,6 +253,41 @@ footer {
   }
 }
 #newReq {
-  border: 1px solid white;
-  color: pink;
+  border: 1px dotted black;
+  border-radius: 5px;
+  color: aliceblue;
+}
+.waving-hand {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Waves 5 times */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }

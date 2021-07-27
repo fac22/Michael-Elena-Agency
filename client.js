@@ -70,10 +70,10 @@ function allInfo(){
     request.value];
   const template = document.querySelector("#review-client");
   const domFragment = template.content.cloneNode(true);
-  domFragment.querySelector("h2").textContent += name;
-  domFragment.querySelector("h3").textContent += email;
-  domFragment.querySelector("h1").textContent += newRobot;
-  domFragment.querySelector("p").textContent += desires;
+  domFragment.querySelector("#formName").textContent += name;
+  domFragment.querySelector("#formEmail").textContent += email;
+  domFragment.querySelector("#formRobot").textContent += newRobot;
+  domFragment.querySelector("#formReq").textContent += desires;
   
   if(!desires.length || !name.length || !newRobot.length){
     alert("Please fill out all sections")
