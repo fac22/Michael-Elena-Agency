@@ -139,7 +139,8 @@ h3 {
   box-shadow: 3px 3px 2px 1px rgba(222, 96, 163, 0.2);
 }
 
-.span-text {
+.span-text,
+.error-text {
   color: rgba(230, 72, 167, 0.9);
   font-size: 0.9rem;
   transition: all 0.5s;
@@ -234,6 +235,13 @@ footer {
   gap: 1.1rem;
   grid-auto-rows: 1fr;
 }
+#Clients {
+  text-align: center;
+  border: 2px solid gold;
+  border-radius: 5px;
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2); */
+  box-shadow: 12px 12px 2px 1px goldenrod;
+}
 
 @media (min-width: 800px) {
   header {
@@ -253,5 +261,44 @@ footer {
     /* border: 2px solid rgba(247, 202, 24, 1); */
     border: 3px solid #00ced1;
     border-radius: 50%;
+  }
+}
+#newReq {
+  border: 1px dotted black;
+  border-radius: 5px;
+  color: aliceblue;
+}
+.waving-hand {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Waves 5 times */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
   }
 }

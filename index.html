@@ -10,6 +10,7 @@
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
+    <script defer src="client.js"></script>
     <title>MEA Robotics</title>
   </head>
   <body>
@@ -20,8 +21,8 @@
         <ul class="navbar row">
           <li><a href="#About">About Us</a></li>
           <li><a href="#Team">Our Team</a></li>
-          <li><a href="#Members">Members</a></li>
           <li><a href="#Clients">Clients</a></li>
+          <li><a href="#Members">Members</a></li>
           <li><a href="#Socials">Let's connect!</a></li>
         </ul>
       </div>
@@ -141,6 +142,78 @@
         </ul>
       </section>
     </main>
+    <!-- ----------------------------- CLIENT AREA -----------------------------  -->
+    <section id ="Clients" class="client-area center width-md stack-lg">
+      <h2>Get your own MEA Robot!</h2>
+      <form action="" class="center stack-lg" id = "client-form">
+        <article class="center stack-md">
+          <h3>Client Info</h3>
+          <!-- --------------------- name -->
+          <section>
+            <section>
+              <label for="client-name">Name/ Company Name:</label>
+              <div class="error-text hide">Please enter a valid name (between 3 and 20 characters).</div>
+            </section>
+            <input
+              type="text"
+              id="client-name"
+              placeholder="e.g John Smith"
+              required
+            />
+          </section>
+          <!-- --------------------- email -->
+          <section>
+            <section>
+              <label for="client-email">E-mail address:</label>
+              <div class="error-text hide">Enter a valid email address!</div>
+
+              <input type="email" id="client-email" size="30" required />
+            </section>
+          </section>
+          <!-- --------------------- Which robot? -->
+          <section>
+            Select your desired robot: 
+            <select id="robot">
+              <!-- <option value="none">Choose here</option> -->
+              <option value="Herbie the Home Helper">Herbie</option>
+              <option value="Scarlett the Scheduler">Scarlett</option>
+              <option value="Shane the Shopper">Shane</option>
+              <option value="Vivian the Visual Assistant">Vivian</option>
+              <option value="Chiron the Doctor">Chiron</option>
+              <option value="Enzo the Entertainer">Enzo</option>
+            </select>
+          </section>
+          <!-- --------------------- What would you like the robot to do -->
+          <section>
+            <section>
+              <label for="request">What would you like the robot to do?</label>
+              <div class="error-text hide">Too many characters! Only 200 characters allowed</div>
+            </section>
+            <textarea
+              name="request"
+              id="request"
+              placeholder="max 200 characters"
+              cols="65"
+              rows="7"
+            ></textarea>
+          </section>
+        </article>
+        <button type="button" id="button">Create inquiry</button>
+      </form>
+      <section id = "newReq">
+        <!-- <h2>Request recieved:</h2> -->
+        <div id="new-client"></div>
+      </section>
+      <template id = "review-client">
+        <header>Request recieved:</header>
+        <h2 id = "formName">Hello </h2>
+        <h3 id = "formEmail">Your email is: </h3>
+        <h1 id = "formRobot">Your robot: </h1>
+        <p id = "formReq"><b>What you would like the robot to do:</b> </p>
+        <h4>Thanks for choosing MEA Robotics! We'll be in touch soon! <span class = "waving-hand">👋</span></h4>
+      </template>
+    </section>
+
     <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
     <section id="Members" class="members-area member center width-md stack-lg">
       <h2>Enter our team!</h2>
