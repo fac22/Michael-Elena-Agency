@@ -50,7 +50,7 @@
           <h2>Meet our team members!</h2>
         </div>
 
-        <ul class="grid">
+        <ul class="grid" id="members-list">
           <li>
             <div class="member stack-md">
               <img src="images/Hom-3hpl.jpg" alt="Colorful Robot - Herbie" />
@@ -123,13 +123,28 @@
               </p>
             </div>
           </li>
+          <!-- ----------------------------- NEW MEMBER TEMPLATE -----------------------------  -->
+          <template id="new-member">
+            <li>
+              <div class="member stack-md">
+                <img
+                  alt=""
+                  class="member-avatar"
+                  width="200"
+                  onchange="loadFile(event)"
+                />
+                <h3 class="member-title"></h3>
+                <p></p>
+              </div>
+            </li>
+          </template>
         </ul>
       </section>
     </main>
     <!-- ----------------------------- MEMBERS AREA -----------------------------  -->
-    <section id="Members" class="members-area center width-md stack-lg">
+    <section id="Members" class="members-area member center width-md stack-lg">
       <h2>Enter our team!</h2>
-      <form action="" class="center stack-lg">
+      <form class="center stack-lg">
         <article class="center stack-md">
           <h3>Tell us a few things about you</h3>
           <!-- --------------------- name -->
@@ -189,9 +204,7 @@
           <div>
             <div class="row">
               <label for="pass">Password:</label>
-              <div class="span-text hide">
-                min 8 characters
-              </div>
+              <div class="span-text hide">min 8 characters</div>
             </div>
 
             <input
@@ -203,6 +216,10 @@
             />
           </div>
         </article>
+
+        <div>
+          <button type="button" id="member-submit">Submit</button>
+        </div>
       </form>
     </section>
 
