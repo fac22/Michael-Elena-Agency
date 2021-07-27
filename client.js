@@ -59,11 +59,8 @@ let output = [
   robot.options[robot.selectedIndex].value,
   request.value
 ]
-function returnOutput(){
-  console.log([cName.value,
-    cEmail.value,
-    robot.options[robot.selectedIndex].value,
-    request.value]);
+function resetForm(){
+  document.getElementById("client-form").reset();
 }
 
 function allInfo(){
@@ -73,25 +70,26 @@ function allInfo(){
     request.value];
   const template = document.querySelector("#review-client");
   const domFragment = template.content.cloneNode(true);
-  domFragment.querySelector("h2").innerHTML = name;
-  domFragment.querySelector("h3").innerHTML = email;
-  domFragment.querySelector("h1").innerHTML = newRobot;
-  domFragment.querySelector("p").innerHTML = desires;
+  domFragment.querySelector("h2").textContent += name;
+  domFragment.querySelector("h3").textContent += email;
+  domFragment.querySelector("h1").textContent += newRobot;
+  domFragment.querySelector("p").textContent += desires;
   
   if(!desires.length || !name.length || !newRobot.length){
     alert("Please fill out all sections")
   }else{
     newSection.appendChild(domFragment);
   }
-  
-
 }
+
 
 window.addEventListener('load', init);
 request.addEventListener('input', validateRequest);
 cName.addEventListener('input', validateName);
 cEmail.addEventListener('input', validateEmail);
 robot.addEventListener('change', checkRobot);
-document.getElementById("button").addEventListener('click', returnOutput);
+// document.getElementById("button").addEventListener('click', allInfo.reset());
 document.getElementById("button").addEventListener("click", allInfo);
+document.getElementById("button").addEventListener("click", resetForm);
+
 
