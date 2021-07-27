@@ -14,9 +14,11 @@ function init() {
     x.classList.add('hide');
   });
   nameId.value = '';
+  avatar.value = '';
   description.value = '';
   email.value = '';
 }
+
 function validateName() {
   if (nameId.value.length < 3 || nameId.value.length > 20) {
     nameId.classList.add('warning');
@@ -26,6 +28,7 @@ function validateName() {
     warningTxt[0].classList.add('hide');
   }
 }
+
 function validateDescription() {
   if (description.value.length > 149) {
     description.classList.add('warning');
@@ -35,6 +38,7 @@ function validateDescription() {
     warningTxt[1].classList.add('hide');
   }
 }
+
 function validateEmail() {
   const re =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -47,6 +51,7 @@ function validateEmail() {
     warningTxt[2].classList.add('hide');
   }
 }
+
 function validatePass() {
   if (pass.value.length < 8) {
     pass.classList.add('warning');
@@ -56,19 +61,30 @@ function validatePass() {
     warningTxt[3].classList.add('hide');
   }
 }
-function submitMemberApp() {
-  const member = {
-    memberName: nameId.value,
-    memberAvatar: '',
-    memberText: description.value,
-  };
+
+function loadFile(event) {
+  // var selectedFile = event.target.files[0];
+  // var reader = new FileReader();
+
+  // avatar.title = selectedFile.name;
+  
+
+  // reader.onload = function (event) {
+  //   avatar.src = event.target.result;
+  // };
+
+  // reader.readAsDataURL(selectedFile);
   console.log('i*m here!');
+  avatar.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function submitMemberApp() {
   const template = document.querySelector('#new-member');
   const domFragment = template.content.cloneNode(true);
 
-  domFragment.querySelector('img').src = member.memberAvatar;
-  domFragment.querySelector('h3').textContent = member.memberName;
-  domFragment.querySelector('p').textContent = member.memberText;
+  domFragment.querySelector('img').src = avatar.src;
+  domFragment.querySelector('h3').textContent = nameId.value;
+  domFragment.querySelector('p').textContent = description.value;
 
   currentMembers.appendChild(domFragment);
 }
