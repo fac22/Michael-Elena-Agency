@@ -1,10 +1,13 @@
 // -------------- Input Validation for Members --------------
 
 const nameId = document.querySelector('#name');
+const avatar = document.querySelector('#avatar');
 const description = document.querySelector('#description');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#pass');
 const warningTxt = document.querySelectorAll('.span-text');
+const memberSubmit = document.querySelector('#member-submit');
+const currentMembers = document.querySelector('#members-list');
 
 function init() {
   warningTxt.forEach((x) => {
@@ -33,8 +36,9 @@ function validateDescription() {
   }
 }
 function validateEmail() {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
- 
+  const re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   if (!re.test(email.value)) {
     email.classList.add('warning');
     warningTxt[2].classList.remove('hide');
@@ -52,9 +56,26 @@ function validatePass() {
     warningTxt[3].classList.add('hide');
   }
 }
+function submitMemberApp() {
+  const member = {
+    memberName: nameId.value,
+    memberAvatar: '',
+    memberText: description.value,
+  };
+
+  const template = document.querySelector('#new-member');
+  const domFragment = template.content.cloneNode(true);
+
+  domFragment.querySelector('img').src = member.memberAvatar;
+  domFragment.querySelector('h3').textContent = member.memberName;
+  domFragment.querySelector('p').textContent = member.memberText;
+
+  currentMembers.appendChild(domFragment);
+}
 
 window.addEventListener('load', init);
 description.addEventListener('input', validateDescription);
 nameId.addEventListener('input', validateName);
 email.addEventListener('input', validateEmail);
 pass.addEventListener('input', validatePass);
+memberSubmit.addEventListener('click', submitMemberApp);
