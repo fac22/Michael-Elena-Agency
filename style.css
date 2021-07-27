@@ -154,6 +154,12 @@ h3 {
   box-shadow: 12px 12px 2px 1px rgba(0, 206, 209, 0.2);
 }
 
+input:focus,
+textarea:focus {
+  border: 2px solid #00ced1;
+  box-shadow: 9px 9px 2px 1px rgba(0, 206, 209, 0.2);
+}
+
 /* ---------------------- F O O T E R ----------------------  */
 footer {
   margin-top: 5rem;
